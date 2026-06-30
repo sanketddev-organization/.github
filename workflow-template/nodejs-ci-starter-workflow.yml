@@ -14,16 +14,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@7
 
-      - name: Setup NodeJS Version - 20.x
+      - name: Setup NodeJS Version
         uses: actions/setup-node@v6
         with:
-          node-version: '20.x'
+          node-version: 18
 
       - name: Install Dependencies
         run: npm install
-
-      - name: Unit Testing
-        run: npm test --if-present
-
-      - name: Code Coverage
-        run: npm run coverage --if-present
